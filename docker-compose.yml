@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  php:
+    image: php:7.4.2-apache
+    volumes:
+      - ./php.ini:/usr/local/etc/php/php.ini
+      - ./html:/var/www/html
+    ports:
+      - 8181:80
+  db:
+    image: mariadb:10.4.12
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_DATABASE=example
+      - MYSQL_USER=example
+      - MYSQL_PASSWORD=example
+  adminer:
+    image: adminer:4.7.6
+    restart: always
+    ports:
+      - 8182:8080
