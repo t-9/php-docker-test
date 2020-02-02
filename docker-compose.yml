@@ -8,6 +8,9 @@ services:
       - ./html:/var/www/html
     ports:
       - 8181:80
+    build:
+      context: .
+      dockerfile: Dockerfile
   db:
     image: mariadb:10.4.12
     restart: always
