@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  php:
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - 8181:80
+    build:
+      context: ./php-apache
+  db:
+    image: mariadb:10.4.12
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+  adminer:
+    image: adminer:4.7.6
+    ports:
+      - 8182:8080
