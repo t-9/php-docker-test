@@ -4,6 +4,8 @@ services:
   php:
     volumes:
       - ../src:/var/www/html
+      - ../php.ini:/usr/local/etc/php/php.ini
+      - ../sites-available:/etc/apache2/sites-available
     ports:
       - ${PHP_PORT}:80
     build:

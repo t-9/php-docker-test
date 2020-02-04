@@ -1,6 +1,4 @@
 FROM php:7.4.2-apache
-COPY ./php.ini /usr/local/etc/php/
-COPY ./*.conf /etc/apache2/sites-available/
 RUN apt update && \
     apt install -y \
       git \
