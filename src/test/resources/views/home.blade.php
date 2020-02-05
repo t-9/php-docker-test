@@ -1,14 +1,19 @@
 @extends('adminlte::page')
- 
-<!-- タイトル -->
-@section('title', 'Dashboard')
- 
-<!-- 見出し -->
+
+@section('title', 'ダッシュボード')
+
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>ダッシュボード</h1>
 @stop
- 
-<!-- 内容 -->
+
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>ようこそ.</p>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
 @stop
