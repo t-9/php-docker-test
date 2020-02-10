@@ -13,3 +13,4 @@ ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 RUN composer global require "laravel/installer" \
     && composer global require "laravel/envoy"
+RUN docker-php-ext-install pdo_mysql
