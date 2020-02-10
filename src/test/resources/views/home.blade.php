@@ -4,6 +4,7 @@
 
 @section('content_header')
     <h1>ダッシュボード</h1>
+    <?php phpinfo(); ?>
 @stop
 
 @section('content')
