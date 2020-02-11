@@ -19,4 +19,6 @@ rm .env.tmp1
 php artisan key:generate
 php artisan config:clear
 
+php artisan migrate
+
 return 0
