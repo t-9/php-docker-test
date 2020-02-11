@@ -14,3 +14,7 @@ ENV PATH $PATH:/composer/vendor/bin
 RUN composer global require "laravel/installer" \
     && composer global require "laravel/envoy"
 RUN docker-php-ext-install pdo_mysql
+RUN apt update && \
+    apt install -y \
+      libonig-dev
+RUN docker-php-ext-install bcmath mbstring
