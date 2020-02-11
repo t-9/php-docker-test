@@ -19,3 +19,4 @@ RUN apt update && \
     apt install -y \
       libonig-dev
 RUN docker-php-ext-install bcmath mbstring
+RUN pecl install redis
