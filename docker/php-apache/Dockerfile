@@ -13,6 +13,7 @@ ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
 RUN composer global require "laravel/installer" \
     && composer global require "laravel/envoy"
+RUN a2enmod rewrite
 RUN docker-php-ext-install pdo_mysql
 RUN apt update && \
     apt install -y \
