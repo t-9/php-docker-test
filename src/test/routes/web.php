@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/dbtest', 'DBTestController@index');
+
+Route::get('/cachetest', 'CacheTestController@index');
