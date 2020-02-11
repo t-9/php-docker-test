@@ -30,6 +30,8 @@ services:
     ports:
       - ${REDIS_PORT}:6379
     restart: always
+    volumes:
+      - redis-data:/data
   adminer:
     image: adminer:4.7.6
     ports:
@@ -37,3 +39,4 @@ services:
     restart: always
 volumes:
   mysql-data:
+  redis-data:
