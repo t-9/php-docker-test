@@ -1,5 +1,6 @@
 FROM php:7.4.2-apache
 WORKDIR '/'
+COPY init.sh /root/
 RUN apt update && \
     apt install -y \
       git \
