@@ -23,6 +23,6 @@ php artisan migrate
 
 echo ServerName $HOSTNAME > /etc/apache2/conf-available/fqdn.conf
 a2enconf fqdn
-service apach2 restart
+service apache2 restart
 
 return 0
