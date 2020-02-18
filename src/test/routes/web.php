@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', fn() => view('home'));
 
 Route::get('/dbtest', 'DBTestController@index');
 
