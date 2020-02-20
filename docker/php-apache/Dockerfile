@@ -23,3 +23,6 @@ RUN docker-php-ext-install bcmath mbstring
 RUN pecl install redis
 RUN apt update && \
     apt install -y less
+RUN apt update && \
+    apt install -y libicu-dev
+RUN docker-php-ext-install intl
