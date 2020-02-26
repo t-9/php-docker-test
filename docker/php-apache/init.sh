@@ -21,6 +21,9 @@ php artisan config:clear
 
 php artisan migrate
 
+npm install
+npm run dev
+
 echo ServerName $HOSTNAME > /etc/apache2/conf-available/fqdn.conf
 a2enconf fqdn
 service apache2 restart
