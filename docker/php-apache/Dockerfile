@@ -12,8 +12,6 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV PATH $PATH:/composer/vendor/bin
-RUN composer global require "laravel/installer" \
-    && composer global require "laravel/envoy"
 RUN a2enmod rewrite
 RUN docker-php-ext-install pdo_mysql
 RUN apt update && \
@@ -26,3 +24,6 @@ RUN apt update && \
 RUN apt update && \
     apt install -y libicu-dev
 RUN docker-php-ext-install intl
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
+RUN apt install -y nodejs
+RUN apt install -y npm
