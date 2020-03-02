@@ -38,6 +38,15 @@ services:
     ports:
       - ${ADMINER_PORT}:8080
     restart: always
+  redisCommander:
+    image: rediscommander/redis-commander:latest
+    ports:
+      - ${REDIS_COMMANDER_PORT}:8081
+    environment:
+      REDIS_HOSTS: Index0:redis:6379:0:foobared,Index1:redis:6379:1:foobared
+    restart: always
+    depends_on:
+      - redis
 volumes:
   mysql-data:
   redis-data:
