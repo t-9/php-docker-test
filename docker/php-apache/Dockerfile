@@ -27,3 +27,4 @@ RUN docker-php-ext-install intl
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 RUN apt install -y nodejs
 RUN docker-php-ext-install opcache
+RUN pecl install apcu
