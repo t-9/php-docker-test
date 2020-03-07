@@ -16,3 +16,18 @@ Route::get('/', fn() => view('home'));
 Route::get('/dbtest', 'DBTestController@index');
 
 Route::get('/cachetest', 'CacheTestController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
