@@ -1,12 +1,6 @@
 @extends('layouts.app')
-@extends('adminlte::page')
 
 @section('title', 'ダッシュボード')
-
-@section('content_header')
-    <h1>ダッシュボード</h1>
-    <?php phpinfo(); ?>
-@stop
 
 @section('content')
 <div class="container">
@@ -28,8 +22,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @endsection

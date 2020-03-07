@@ -13,7 +13,11 @@ rm .env.tmp1
 sed -e 's/REDIS_HOST=127\.0\.0\.1/REDIS_HOST=redis/g' .env > .env.tmp1
 sed -e 's/CACHE_DRIVER=file/CACHE_DRIVER=redis/g' .env.tmp1 > .env
 sed -e 's/SESSION_DRIVER=file/SESSION_DRIVER=redis/g' .env > .env.tmp1
-cp .env.tmp1 .env
+
+sed -e 's/MAIL_HOST=smtp\.mailtrap\.io/MAIL_HOST=maildev/g' .env.tmp1 > .env
+sed -e 's/MAIL_PORT=2525/MAIL_PORT=25/g' .env > .env.tmp1
+sed -e 's/MAIL_FROM_ADDRESS=null/MAIL_FROM_ADDRESS=test@example\.com/g' .env.tmp1 > .env
+
 rm .env.tmp1
 
 php artisan key:generate
