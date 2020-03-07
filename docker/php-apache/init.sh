@@ -24,7 +24,7 @@ php artisan migrate
 npm install
 npm run dev
 
-yes | phive install --force-accept-unsigned phpDocumentor
+yes | phive install
 
 echo ServerName $HOSTNAME > /etc/apache2/conf-available/fqdn.conf
 a2enconf fqdn
