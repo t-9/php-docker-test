@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $client = new Client();
+        $client->post('localhost/password/email', [
+            'form_params' => [
+                'email' => 'test@example.com'
+            ],
+        ]);
         return view('home');
     }
 }
