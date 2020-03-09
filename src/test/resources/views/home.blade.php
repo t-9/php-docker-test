@@ -26,7 +26,7 @@
 </div>
 <div id="app">
     <h1>Vue Select</h1>
-    <v-select :options="options"></v-select>
+    <v-select :options="options" v-bind:options="{{ json_encode(['佐藤','田中']) }}"></v-select>
   </div>
 @endsection
 

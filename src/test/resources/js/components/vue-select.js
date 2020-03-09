@@ -6,10 +6,6 @@ Vue.component('v-select', vSelect);
 new Vue({
   el: '#app',
   data: {
-    options: [
-      'foo',
-      'bar',
-      'baz'
-    ]
+    options: ['options']
   }
 });

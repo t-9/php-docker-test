@@ -77996,7 +77996,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEB
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
-    options: ['foo', 'bar', 'baz']
+    options: ['options']
   }
 });
 
