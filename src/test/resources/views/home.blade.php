@@ -24,10 +24,27 @@
 </div>
 <div id="example">
 </div>
-<div id="app">
+@php
+$options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '田中']];
+@endphp
+<form action='' method="GET">
+<div id="app" class="form-group">
     <h1>Vue Select</h1>
-    <v-select :options="options" v-bind:options="{{ json_encode(['佐藤','田中']) }}"></v-select>
+    <v-select v-bind:options="{{ json_encode($options) }}" :reduce="label => label.code" label="label" v-model="selected">
+        <template #search="{attributes, events}">
+            <input
+              name="hoge"
+              class="vs__search"
+              :required="!selected"
+              v-bind="attributes"
+              v-on="events"
+              v-model="selected"
+            />
+          </template>
+    </v-select>
   </div>
+  <button type="submit">aaa</button>
+</form>
 @endsection
 
 @section('css')
