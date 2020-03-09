@@ -22,4 +22,20 @@
         </div>
     </div>
 </div>
+<div id="example">
+</div>
+<div id="app">
+    <h1>Vue Select</h1>
+    <v-select :options="options"></v-select>
+  </div>
+@endsection
+
+@section('css')
+<link href="css/app.css" rel="stylesheet" type="text/css">
+@endsection
+
+@section('js')
+<script src="/js/manifest.js"></script>
+<script src="/js/vendor.js"></script>
+<script src="/js/app.js"></script>
 @endsection

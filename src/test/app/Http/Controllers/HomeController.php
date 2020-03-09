@@ -24,6 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        return view('home');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function indexMailTest()
+    {
         $client = new Client();
         $client->post('localhost/password/email', [
             'form_params' => [
