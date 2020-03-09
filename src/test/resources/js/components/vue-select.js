@@ -4,7 +4,7 @@ import vSelect from 'vue-select';
 Vue.component('v-select', vSelect);
 
 new Vue({
-  el: '#app',
+  el: 'div.vue-select',
   data: {
     selected: '',
     options: [

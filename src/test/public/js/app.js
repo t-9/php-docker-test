@@ -77994,7 +77994,7 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEBPACK_IMPORTED_MODULE_1___default.a);
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app',
+  el: 'div.vue-select',
   data: {
     selected: '',
     options: ['foo', 'bar', 'baz']

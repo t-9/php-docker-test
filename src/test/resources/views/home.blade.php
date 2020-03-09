@@ -28,7 +28,7 @@
 $options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '田中']];
 @endphp
 <form action='' method="GET">
-<div id="app" class="form-group">
+<div class="vue-select form-group">
     <h1>Vue Select</h1>
     <v-select v-bind:options="{{ json_encode($options) }}" :reduce="label => label.code" label="label" v-model="selected">
         <template #search="{attributes, events}">
