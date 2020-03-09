@@ -48,11 +48,11 @@ $options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '�
 @endsection
 
 @section('css')
-<link href="css/app.css" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('js')
 <script src="/js/manifest.js"></script>
 <script src="/js/vendor.js"></script>
-<script src="/js/app.js"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 @endsection

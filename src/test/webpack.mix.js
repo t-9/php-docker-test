@@ -17,3 +17,7 @@ mix.react('resources/js/app.js', 'public/js')
       "jquery": ['$', 'window.jQuery'],
       "vue": ['Vue', 'window.Vue']
     });
+
+if (mix.inProduction()) {
+    mix.version();
+}
