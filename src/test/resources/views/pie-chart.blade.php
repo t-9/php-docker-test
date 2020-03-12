@@ -5,7 +5,7 @@
 @section('content')
 <div class="pie-chart">
 	<h1>Pie Chart</h1>
-	<pie-chart v-bind:data="[234, 266, 273, 54, 22, 22, 22]" v-bind:bg-color="['#f87559', '#f873279', '#f87979', '#f87a79', '#f879aa','#f87009', '#00ffff']" v-bind:labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"></pie-chart>
+	<pie-chart v-bind:data="[234, 266, 273, 54, 22, 22, 22]" v-bind:bg-color="['#f87559', '#f87279', '#f87979', '#f87a79', '#f879aa','#f87009', '#00ffff']" v-bind:labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"></pie-chart>
 </div>
 @endsection
 
