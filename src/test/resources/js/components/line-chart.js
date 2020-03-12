@@ -3,6 +3,7 @@ import { Line } from 'vue-chartjs'
 
 Vue.component('line-chart', {
   extends: Line,
+  props: ['data'],
   mounted () {
     this.renderChart({
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -10,7 +11,7 @@ Vue.component('line-chart', {
         {
           label: 'Data One',
           backgroundColor: '#f87979',
-          data: [44, 39, 40, 30, 32, 50, 80]
+          data: this.data
         }
       ]
     }, {responsive: true, maintainAspectRatio: false})

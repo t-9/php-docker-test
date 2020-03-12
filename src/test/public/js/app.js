@@ -90352,13 +90352,14 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('line-chart', {
   "extends": vue_chartjs__WEBPACK_IMPORTED_MODULE_1__["Line"],
+  props: ['data'],
   mounted: function mounted() {
     this.renderChart({
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
         label: 'Data One',
         backgroundColor: '#f87979',
-        data: [44, 39, 40, 30, 32, 50, 80]
+        data: this.data
       }]
     }, {
       responsive: true,

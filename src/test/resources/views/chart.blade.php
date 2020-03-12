@@ -5,7 +5,7 @@
 @section('content')
 <div class="line-chart">
 	<h1>Line Chart</h1>
-	<line-chart></line-chart>
+<line-chart v-bind:data="[234, 266, 273, 54, 64, 554, 333]"></line-chart>
 </div>
 @endsection
 
