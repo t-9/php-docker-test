@@ -30,7 +30,7 @@ $options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '�
 <form action='' method="GET">
 <div class="vue-select form-group">
     <h1>Vue Select</h1>
-    <v-select v-bind:options="{{ json_encode($options) }}" :reduce="label => label.code" label="label" v-model="selected">
+    <v-select v-bind:options="{{ json_encode($options) }}" v-model="selected" v-init:selected="1" :reduce="label => label.code" label="label">
         <template #search="{attributes, events}">
             <input
               name="hoge"

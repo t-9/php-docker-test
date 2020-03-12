@@ -90426,13 +90426,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', vue_select__WEBPACK_IMPORTED_MODULE_1___default.a);
-new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: 'div.vue-select',
-  data: {
-    selected: '',
-    options: ['foo', 'bar', 'baz']
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive('init', {
+  bind: function bind(el, binding, vnode) {
+    vnode.context[binding.arg] = binding.value;
   }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-select', {
+  "extends": vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+  props: ['options'],
+  mounted: function mounted() {
+    data: [{
+      selected: null,
+      options: this.options
+    }];
+  }
+});
+new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+  el: 'div.vue-select'
 });
 
 /***/ }),
