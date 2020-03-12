@@ -20,4 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('/chart', 'chart');
+Route::view('/line-chart', 'line-chart');
+
+Route::view('/pie-chart', 'pie-chart');

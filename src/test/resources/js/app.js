@@ -16,3 +16,4 @@ require('./components/Example');
 
 require('./components/vue-select');
 require('./components/line-chart');
+require('./components/pie-chart');

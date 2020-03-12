@@ -90248,6 +90248,8 @@ __webpack_require__(/*! ./components/vue-select */ "./resources/js/components/vu
 
 __webpack_require__(/*! ./components/line-chart */ "./resources/js/components/line-chart.js");
 
+__webpack_require__(/*! ./components/pie-chart */ "./resources/js/components/pie-chart.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -90369,6 +90371,42 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('line-chart', {
 });
 var vm = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '.line-chart'
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/pie-chart.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/pie-chart.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_chartjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-chartjs */ "./node_modules/vue-chartjs/es/index.js");
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('pie-chart', {
+  "extends": vue_chartjs__WEBPACK_IMPORTED_MODULE_1__["Pie"],
+  props: ['data', 'bgColor', 'labels'],
+  mounted: function mounted() {
+    this.renderChart({
+      labels: this.labels,
+      datasets: [{
+        backgroundColor: this.bgColor,
+        data: this.data
+      }]
+    }, {
+      responsive: true,
+      maintainAspectRatio: false
+    });
+  }
+});
+var vm = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
+  el: '.pie-chart'
 });
 
 /***/ }),
