@@ -90434,7 +90434,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('v-sel', {
     };
   },
   props: ['opts', 'sel', 'nm', 'rq'],
-  template: '<v-select v-bind:options="opts" v-model="selected" v-on="setInitialValue(sel)" :reduce="label => label.code" label="label">' + '<template #search="{attributes, events}">' + '<input :name="nm" class="vs__search" ' + ':required="rq == true" ' + ' v-bind="attributes" v-on="events" v-model="selected" />' + '</template>' + '</v-select>',
+  template: "<v-select v-bind:options=\"opts\" v-model=\"selected\" v-on=\"setInitialValue(sel)\" :reduce=\"label => label.code\" label=\"label\">\n  <template #search=\"{attributes, events}\">\n  <input :name=\"nm\" class=\"vs__search\" :required=\"rq == true\" v-bind=\"attributes\" v-on=\"events\" v-model=\"selected\" />\n  </template>\n  </v-select>",
   methods: {
     setInitialValue: function setInitialValue(val) {
       this.selected = this.selected || val;
