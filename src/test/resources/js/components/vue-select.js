@@ -4,9 +4,9 @@ import vSelect from 'vue-select';
 Vue.component('v-select', vSelect);
 
 Vue.component('v-sel', {
-  data: function () {
+  data() {
     return {
-      selected: null,
+      selected: null
     }
   },
   props: ['opts', 'sel', 'nm', 'rq'],
