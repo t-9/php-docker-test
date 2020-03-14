@@ -3,32 +3,25 @@ import vSelect from 'vue-select';
 
 Vue.component('v-select', vSelect);
 
-new Vue({
-  el: '.vue-select-surname',
-  data: {
-    selected: null,
-    options: []
+Vue.component('v-sel', {
+  data: function () {
+    return {
+      selected: null
+    }
   },
+  props: ['opts', 'sel', 'nm'],
+  template: '<v-select v-bind:options="opts" v-model="selected" v-on="setInitialValue(sel)" :reduce="label => label.code" label="label">' 
+  + '<template #search="{attributes, events}">'
+  + '<input :name="nm" class="vs__search" :required="!selected" v-bind="attributes" v-on="events" v-model="selected" />'
+  + '</template>'
+  + '</v-select>',
   methods: {
     setInitialValue: function (val) {
-      if (this.selected == null) {
-        this.selected = val;
-      }
+      this.selected = this.selected || val;
     }
   }
 })
 
 new Vue({
-  el: '.vue-select-given-name',
-  data: {
-    selected: null,
-    options: []
-  },
-  methods: {
-    setInitialValue: function (val) {
-      if (this.selected == null) {
-        this.selected = val;
-      }
-    }
-  }
+  el: '.vue-select',
 })

@@ -25,40 +25,17 @@
 <div id="example">
 </div>
 @php
-$options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '田中']];
-$options2 = [['code' => '0', 'label' => '光美'], ['code' => '1', 'label' => '由香里']];
+$options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '田中'], ['code' => '2', 'label' => '東雲']];
+$options2 = [['code' => '0', 'label' => '光美'], ['code' => '1', 'label' => '由香里'], ['code' => '2', 'label' => '有栖']];
+$test_name = 'test';
 @endphp
 <form action='' method="GET">
-<div class="vue-select-surname form-group">
+<div class="vue-select form-group">
     <h1>Vue Select</h1>
     <p>苗字</p>
-    <v-select v-bind:options="{{ json_encode($options) }}" v-model="selected" v-on="setInitialValue('1')" :reduce="label => label.code" label="label">
-        <template #search="{attributes, events}">
-            <input
-              name="hoge"
-              class="vs__search"
-              :required="!selected"
-              v-bind="attributes"
-              v-on="events"
-              v-model="selected"
-            />
-          </template>
-    </v-select>
-</div>
-<div class="vue-select-given-name form-group">
+    <v-sel v-bind:opts="{{ json_encode($options) }}" v-bind:sel="'1'" :nm="'test'"></v-sel>
     <p>名前</p>
-    <v-select v-bind:options="{{ json_encode($options2) }}" v-model="selected" v-on="setInitialValue('0')" :reduce="label => label.code" label="label">
-        <template #search="{attributes, events}">
-            <input
-              name="hoge2"
-              class="vs__search"
-              :required="!selected"
-              v-bind="attributes"
-              v-on="events"
-              v-model="selected"
-            />
-          </template>
-    </v-select>
+    <v-sel v-bind:opts="{{ json_encode($options2) }}" v-bind:sel="'2'" :nm="'test2'"></v-sel>
   </div>
   <button type="submit">aaa</button>
 </form>
