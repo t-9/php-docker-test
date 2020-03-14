@@ -33,9 +33,9 @@ $test_name = 'test';
 <div class="vue-select form-group">
     <h1>Vue Select</h1>
     <p>苗字</p>
-    <v-sel v-bind:opts="{{ json_encode($options) }}" v-bind:sel="'1'" :nm="'test'" :rq="true"></v-sel>
+    <v-sel :options="{{ json_encode($options) }}" :value="'1'" :name="'test'" :required="true"></v-sel>
     <p>名前</p>
-    <v-sel v-bind:opts="{{ json_encode($options2) }}" v-bind:sel="''" :nm="'test2'"></v-sel>
+    <v-sel :options="{{ json_encode($options2) }}" :value="''" :name="'test2'"></v-sel>
   </div>
   <button type="submit">aaa</button>
 </form>
