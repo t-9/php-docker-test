@@ -27,6 +27,7 @@
         "minimist": "^1.2.2"
     },
     "dependencies": {
+        "@types/vue-select": "^2.5.0",
         "chart.js": "^3.0.0-alpha",
         "vue": "^2.6.11",
         "vue-chartjs": "^3.5.0",
