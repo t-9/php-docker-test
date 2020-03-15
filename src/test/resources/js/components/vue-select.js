@@ -21,7 +21,3 @@ Vue.component('v-sel', {
     }
   }
 })
-
-new Vue({
-  el: '.vue-select',
-})

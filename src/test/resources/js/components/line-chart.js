@@ -18,7 +18,3 @@ Vue.component('line-chart', {
   }
   
 })
-
-var vm = new Vue({
-  el: '.line-chart'
-})

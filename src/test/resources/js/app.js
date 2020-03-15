@@ -12,8 +12,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
 
 require('./components/vue-select');
 require('./components/line-chart');
 require('./components/pie-chart');
+
+new Vue({
+    el: '#app',
+  })

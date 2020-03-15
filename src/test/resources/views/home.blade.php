@@ -22,15 +22,13 @@
         </div>
     </div>
 </div>
-<div id="example">
-</div>
 @php
 $options = [['code' => '0', 'label' => '佐藤'], ['code' => '1', 'label' => '田中'], ['code' => '2', 'label' => '東雲']];
 $options2 = [['code' => '0', 'label' => '光美'], ['code' => '1', 'label' => '由香里'], ['code' => '2', 'label' => '有栖']];
 $test_name = 'test';
 @endphp
 <form action='' method="GET">
-<div class="vue-select form-group">
+  <div class="form-group">
     <h1>Vue Select</h1>
     <p>苗字</p>
     <v-sel :options="{{ json_encode($options) }}" :value="'1'" :name="'test'" :required="true"></v-sel>

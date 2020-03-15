@@ -17,7 +17,3 @@ Vue.component('pie-chart', {
   }
   
 })
-
-var vm = new Vue({
-  el: '.pie-chart'
-})
