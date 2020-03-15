@@ -10,7 +10,7 @@ Vue.component('v-sel', {
     }
   },
   props: ['options', 'value', 'name', 'required'],
-  template: `<v-select v-bind:options="options" v-model="selected" v-on="setInitialValue(value)" :reduce="label => label.code" label="label">
+  template: `<v-select v-bind:options="options" v-model="selected" v-on="setInitialValue(value)" :reduce="label => label.value" label="label">
   <template #search="{attributes, events}">
   <input :name="name" class="vs__search" :required="required == true" v-bind="attributes" v-on="events" v-model="selected" />
   </template>
