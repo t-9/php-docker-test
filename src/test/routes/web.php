@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/line-chart', 'line-chart');
 
 Route::view('/pie-chart', 'pie-chart');
+
+Route::view('/samples/app/1', 'samples/app1');

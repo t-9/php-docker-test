@@ -17,6 +17,8 @@ require('./components/vue-select');
 require('./components/line-chart');
 require('./components/pie-chart');
 
+require('./components/samples/sample-app1');
+
 new Vue({
     el: '#app',
   })
