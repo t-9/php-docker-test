@@ -16,7 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
    .autoload({
       "jquery": ['$', 'window.jQuery'],
       "vue": ['Vue', 'window.Vue']
-    });
+    })
+    .sourceMaps();
 
 if (mix.inProduction()) {
     mix.version();
