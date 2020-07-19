@@ -18,7 +18,7 @@
         "eslint-plugin-vue": "^6.2.2",
         "jquery": "^3.4.1",
         "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.13",
+        "lodash": "^4.17.19",
         "minimist": "^1.2.2",
         "popper.js": "^1.12",
         "react": "^16.13.0",
